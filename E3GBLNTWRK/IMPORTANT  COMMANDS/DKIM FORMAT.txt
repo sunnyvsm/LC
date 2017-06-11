@@ -1,0 +1,27 @@
+
+==========APPLICABLE FOR BIGROCK================
+
+for appleidlig.biz
+Name: 20160215._domainkey.appleidlig.biz
+Values: "v=DKIM1; g=*; k=rsa; p=MIGfMA0GCSqGSIb3DQEBAQUAA4GNADCBiQKBgQDZbA7Yr+Gm8A2ydIX9QnCFpCkO
+PvgbV5R34hC/gDKgcTd7cqAJ2uQMlXM1IJvLyX78B88pvbn1QSLK/sw/Rg/Hxxmw
+HXAOVWwmGgFhRkWcx80p0PLV8EsskV6E3YanYtqKSUhL2k9c6zci8Nxr8tyfIlfE
+Qi9saL+OR5zdxcZcFwIDAQAB"
+
+=================================================
+
+============SPF RECORD ENTRY=====================
+"v=spf1 +a +mx +ip4:76.163.25.42 ~all"
+
+==================================================
+
+==============ADDING DKIM ENTRY TO PMTA==========
+
+smtp-source-ip 76.163.25.57
+<virtual-mta vmta_76.163.25.57>
+domain-key 20160215, yahaolgm.biz, /etc/pmta/20160215.yahaolgm.biz.pem
+smtp-source-host 76.163.25.57 yahaolgm.biz
+</virtual-mta>
+
+==================================================
+

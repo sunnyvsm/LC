@@ -1,0 +1,1 @@
+knife bootstrap 66.160.134.143 --bootstrap-version 10.1.1.1  -N top.appleidlig.biz -E production -P e3gblntwrkroot -x root -r 'recipe[e3gblntwrk]'
